@@ -12,45 +12,32 @@
   display: flex;
   white-space: nowrap;
 }
-.VideoThumbnail {
-  width: 10rem;
-  height: auto;
-  margin-right: 5px;
-  float: left;
-  /* width: 5%; */
-  padding: 5px;
-}
 
-.VideoThumbnail img {
-  flex: 0 0 auto;
+.VideoThumbnail {
   width: 100%;
-  height: 100%px;
+  height: 100%;
   margin-right: 5px;
-  /* float: left; */
-  /* width: 5%; */
+  padding: 0 5px;
+
   object-fit: contain;
-  /* padding: 5px; */
-  /* flex-shrink: 0; */
-  transition: transform 0.3s;
+
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .movies-wrapper::-webkit-scrollbar {
   display: none;
 }
-.VideoThumbnail{
-  position: relative;
-  overflow: hidden;
-}
-.VideoThumbnail:hover img{
-  transform: scale(1.08s);
-  transition: 0.5s;
+.VideoThumbnail:hover {
+  transform: scale(1.5);
 }
 .thumbnail_large {
   max-height: 250px;
+  transition: transform 0.5s;
 }
-/* .thumbnail_large:hover {
-  transform: scale(1.09s);
-} */
+.thumbnail_large:hover {
+  transform: scale(1.5);
+}
 @media (max-device-width: 320px) {
   .VideoThumbnail {
     width: 280px;
@@ -58,12 +45,12 @@
 }
 @media (min-device-width: 320px) and (max-width: 480px) {
   .VideoThumbnail {
-    max-width: 200px;
+    width: 220px;
   }
 }
 @media (device-width: 480px) and (max-width: 768px) {
   .VideoThumbnail {
-    width: 220px;
+    width: 200px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 990px) {

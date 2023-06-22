@@ -65,7 +65,11 @@ function Header() {
             <ul>
               {HeaderData.map((link) => {
                 return (
-                  <HeaderLink key={link} Title={link.title} url={link.url} />
+                  <HeaderLink
+                    key={link.url}
+                    Title={link.title}
+                    url={link.url}
+                  />
                 );
               })}
             </ul>

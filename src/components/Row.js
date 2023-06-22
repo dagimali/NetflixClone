@@ -16,7 +16,7 @@ function Row({ title, fetchUrl, islarge_row }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(fetchUrl);
-        // console.log(response.data.results);
+        console.log(response.data.results);
         setMovies(response.data.results);
         return fetchData;
       } catch (err) {
@@ -58,8 +58,25 @@ function Row({ title, fetchUrl, islarge_row }) {
     <div className="genre">
       <h1> {title}</h1>
       <div className="movies-wrapper">
-        {Movies?.map((item) => {
-          let id = item.id;
+        {Movies.map(
+          (item) =>
+            ((islarge_row && item.poster_path) ||
+              (!islarge_row && item.backdrop_path)) && (
+              <img
+                key={item.id}
+                onClick={() => handleClick(item)}
+                className={`VideoThumbnail ${
+                  islarge_row && "thumbnail_large"
+                } `}
+                src={`${imgURL}${
+                  islarge_row ? item.poster_path : item.backdrop_path
+                }`}
+                alt={item.name}
+              />
+            )
+        )}
+        {/* {Movies?.map((item) => {
+         
           let movieName = item.name;
           // console.log(movieName);
           let VideoWrapper = (
@@ -73,15 +90,20 @@ function Row({ title, fetchUrl, islarge_row }) {
                 <img
                   onClick={() => handleClick(item)}
                   src={`${imgURL}${
-                    islarge_row ? item?.poster_path : item?.backdrop_path
+                    islarge_row
+                      ? item.poster_path
+                      : item.backdrop_path || item.poster_path
                   }`}
+                  // src= {`${imgURL}${
+                  //   islarge_row ? item?.poster_path : item?.backdrop_path
+                  // }`}
                   alt={movieName}
                 />
               </div>
             </div>
           );
           return VideoWrapper;
-        })}
+        })} */}
       </div>
       <div key={trailerUrl}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}

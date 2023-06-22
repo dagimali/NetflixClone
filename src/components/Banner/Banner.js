@@ -50,11 +50,11 @@ const Banner = () => {
         </div>
         <div className="button-wrapper">
           <button className="buttonStyle play">
-            <i class="fa fa-play" aria-hidden="true"></i> Play
+            <i className="fa fa-play" aria-hidden="true"></i> Play
           </button>
           <button className="buttonStyle info">
             {" "}
-            <i class="fa fa-info-circle" aria-hidden="true"></i> More Info
+            <i className="fa fa-info-circle" aria-hidden="true"></i> More Info
           </button>
         </div>
         <div className="fadeBg"></div>
