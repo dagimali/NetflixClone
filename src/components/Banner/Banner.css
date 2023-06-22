@@ -1,0 +1,51 @@
+/** @format */
+.movie-wrapper {
+  text-align: left;
+  padding: 20rem 2rem 5rem 3rem;
+  width: max(100vh, 100%);
+  height: auto;
+}
+.movie-wrapper h1 {
+  font-size: 5vw;
+}
+.movieName {
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  font-weight: 700;
+  color: rgba(255, 255, 255);
+}
+.movie_description p {
+  width: 450px;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255);
+}
+.buttonStyle {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 5%;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+  padding: 0.5rem 2rem;
+}
+
+.play {
+  background-color: rgba(255, 255, 255);
+  color: #000;
+}
+.play:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.info {
+  background-color: rgba(91, 92, 88, 0.8);
+  color: rgba(255, 255, 255);
+}
+.info:hover {
+  background-color: rgba(91, 92, 88, 0.5);
+}
+.fadeBg {
+  height: 7.5rem;
+  background-image: linear-gradient (77deg, rgba(0, 0, 0, 0.6), transparent 85%);
+}
