@@ -27,39 +27,42 @@ const Banner = () => {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
   return (
-    <div
-      className="banner-img"
-      style={{
-        backgroundImage: `url(${imgURL}${movie.backdrop_path})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        // minHeight: "100%",
-        Width: "100%",
-        height: "650px",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className="movie-wrapper">
-        <div>
+    <>
+      <div
+        className="banner-img"
+        style={{
+          backgroundImage: `url(${imgURL}${movie.backdrop_path})`,
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          // height: "100%",
+          Width: "100%",
+          height: "40rem",
+          // marginBottom: "-100px",
+          backgroundPosition: "center center",
+          paddingRight: "35px",
+        }}
+      >
+        <div className="movie-wrapper">
           <h1 className="movieName">
             {movie?.name || movie?.title || movie?.original_name}
           </h1>
-        </div>
-        <div className="movie_description">
-          <p>{trimDescription(movie?.overview, 150)}</p>
-        </div>
-        <div className="button-wrapper">
-          <button className="buttonStyle play">
-            <i className="fa fa-play" aria-hidden="true"></i> Play
-          </button>
-          <button className="buttonStyle info">
-            {" "}
-            <i className="fa fa-info-circle" aria-hidden="true"></i> More Info
-          </button>
+
+          <div className="movie_description">
+            <p>{trimDescription(movie?.overview, 150)}</p>
+          </div>
+          <div className="button-wrapper">
+            <button className="buttonStyle play">
+              <i className="fa fa-play" aria-hidden="true"></i> Play
+            </button>
+            <button className="buttonStyle info">
+              {" "}
+              <i className="fa fa-info-circle" aria-hidden="true"></i> More Info
+            </button>
+          </div>
         </div>
         <div className="fadeBg"></div>
       </div>
-    </div>
+    </>
   );
 };
 

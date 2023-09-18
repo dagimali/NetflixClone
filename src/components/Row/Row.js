@@ -3,7 +3,7 @@
 import React from "react";
 import "./Row.css";
 import { useState, useEffect } from "react";
-import axios from "../API-Data/axios";
+import axios from "../../API-Data/axios";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
 // import { Link } from "react";
